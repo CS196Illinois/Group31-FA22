@@ -94,9 +94,27 @@ class VideoCamera(object):
         interpreter.invoke()
         keypoints_with_scores = interpreter.get_tensor(output_details[0]['index'])
 
-        """
-        INSERT JUMPING JACK/WHATEVER EXERCISE CODE HERE
-        """
+        #Bicep Curl Counter
+        try:
+            left_shoulder = keypoints_with_scores[0][0][5]
+            left_elbow = keypoints_with_scores[0][0][7]
+            left_wrist = keypoints_with_scores[0][0][9]
+            
+            angle = calculate_angle(left_shoulder, left_elbow, left_wrist)
+            #print(angle)
+        
+            #Curl Counter Logic (this might need to be better lol)
+            if angle > 160:
+                print("DOWN")
+                stage = "down"
+                print("set stage")
+            if angle < 30 and stage == "down":
+                print("UP")
+                stage = "up"
+                counter += 1
+                print("counter: ", counter)
+        except:
+            pass
 
         draw_connections(frame, keypoints_with_scores, EDGES, 0.5)
         draw_keypoints(frame, keypoints_with_scores, 0.5)
