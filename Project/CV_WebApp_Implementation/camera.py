@@ -71,11 +71,15 @@ EDGES = {
     }
 
 class VideoCamera(object):
+    stage = None
+    counter = 0
+
     def __init__(self):
         self.video = cv2.VideoCapture(0)
     
     def __del__(self):
         self.video.release()
+
     
     def get_frame(self):
         ret, frame = self.video.read()
@@ -105,14 +109,15 @@ class VideoCamera(object):
         
             #Curl Counter Logic (this might need to be better lol)
             if angle > 160:
-                print("DOWN")
+                print("entered here")
+                print(stage) #debug print statements
                 stage = "down"
-                print("set stage")
             if angle < 30 and stage == "down":
                 print("UP")
                 stage = "up"
                 counter += 1
                 print("counter: ", counter)
+            print(stage, counter)
         except:
             pass
 
