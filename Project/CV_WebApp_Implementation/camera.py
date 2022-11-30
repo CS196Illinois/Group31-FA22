@@ -5,6 +5,8 @@ import tensorflow as tf
 from matplotlib import pyplot as plt
 import numpy as np
 
+stage = None
+counter = 0
 interpreter = tf.lite.Interpreter(model_path='lite-model_movenet_singlepose_lightning_3.tflite')
 #interpreter = tf.lite.Interpreter(model_path='lite-model_movenet_singlepose_thunder_3.tflite')
 interpreter.allocate_tensors()
@@ -70,9 +72,23 @@ EDGES = {
     (14, 16): 'c'
     }
 
+def setStage(toSwitchTo):
+    global stage
+    stage = toSwitchTo
+
+def getStage():
+    return stage
+
+def updateCounter():
+    global counter
+    counter += 1
+
+def getCount():
+    global counter
+    return counter
+
+
 class VideoCamera(object):
-    stage = None
-    counter = 0
 
     def __init__(self):
         self.video = cv2.VideoCapture(0)
@@ -105,19 +121,14 @@ class VideoCamera(object):
             left_wrist = keypoints_with_scores[0][0][9]
             
             angle = calculate_angle(left_shoulder, left_elbow, left_wrist)
-            #print(angle)
         
             #Curl Counter Logic (this might need to be better lol)
             if angle > 160:
-                print("entered here")
-                print(stage) #debug print statements
-                stage = "down"
-            if angle < 30 and stage == "down":
-                print("UP")
-                stage = "up"
-                counter += 1
-                print("counter: ", counter)
-            print(stage, counter)
+                setStage("down")
+            if angle < 30 and getStage() == "down":
+                setStage("up")
+                updateCounter()
+                print("Number of Curls: ", getCount())
         except:
             pass
 
