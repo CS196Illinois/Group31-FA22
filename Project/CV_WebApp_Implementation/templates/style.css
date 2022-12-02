@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #f2efea;
+    background-color: #E8EBF7;
 }
 
 
@@ -14,7 +14,7 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: #e9e9e9;
+    background-color: #C3CAEA;
 }
 
     .topnav a {
@@ -28,7 +28,7 @@ body {
     }
 
         .topnav a:hover {
-            background-color: #ddd;
+            background-color: #A4AFDF;
             color: black;
         }
 
@@ -53,14 +53,14 @@ body {
         padding: 6px 10px;
         margin-top: 8px;
         margin-right: 16px;
-        background: #ddd;
+        background: #A4AFDF;
         font-size: 17px;
         border: none;
         cursor: pointer;
     }
 
         .topnav .search-container button:hover {
-            background: #ccc;
+            background: #A4AFDF;
         }
 
 @media screen and (max-width: 600px) {
@@ -123,7 +123,7 @@ body {
     }
 
         .dropdown-content a:hover {
-            background-color: #ddd;
+            background-color: #A4AFDF;
         }
 
 .show {
@@ -131,15 +131,25 @@ body {
 }
 
 h1, h2, h3 {
-    padding-left: 20%;
+    font-size: 22px;
+    padding-left: 7%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 0.5%;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 26.4px;
 }
 
 h1 {
-    font-size: 30px;
+    padding-left: 15%;
+    font-size: 60px;
     padding-top: 10%;
     padding-bottom: 6%;
+    font-weight: 900;
+    color: #38B6FA;
 }
 
 iframe {
@@ -148,8 +158,26 @@ iframe {
 }
 
 video {
-    margin-left: 35%;
-    margin-right: 35%;
-    width: 620px;
-    height: 340px;
+    margin-left: 8%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-right: 10%;
+    width: 920px;
+    height: 540px;
+}
+
+.myDiv {
+    background-color: white;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-top: -7%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.myDivTop {
+    background-color: #25326A;
+    padding-top: 3%;
+    padding-bottom: 6%;
+    background-image: linear-gradient(#25326A, #11152D);
 }
