@@ -4,8 +4,8 @@ from camera import VideoCamera
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return render_template('testDisplay.html')
+def index(VideoCamera):
+    return render_template('testDisplay.html', count= VideoCamera.getCount())
 
 def gen(camera):
     while camera.video.isOpened():
