@@ -47,16 +47,19 @@
         }
     </script>
 
-
-    <h1>Online Personal Trainer</h1>
-    <h2>Exercise 3.0: Toe Touches</h2>
-    <h3>Example video</h3>
-    <video controls>
-        <source src="Jumping Jacks.mp4" type="video/mp4">
-    </video>
-    <h3> Video displaying the user here</h3>
-    <h2>Detection using OpenCV and MoveNet</h2>
-    <img id="bg" src="{{ url_for('video_feed') }}">
+    <div class="myDivTop">
+        <h1>Online Personal Trainer</h1>
+    </div>
+        <div class="myDiv">
+            <h2>Exercise 3.0: Toe Touches</h2>
+            <h3>Example video</h3>
+            <video controls>
+                <source src="Jumping Jacks.mp4" type="video/mp4">
+            </video>
+            <h3> Video displaying the user here</h3>
+            <h2>Detection using OpenCV and MoveNet</h2>
+            <img id="bg" src="{{ url_for('video_feed') }}">
+        </div>
 
 </body>
 </html>
