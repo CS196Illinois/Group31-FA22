@@ -251,10 +251,57 @@ video {
         right: 0;
     }
 
+.left {
+    background-color: #D6D6D6;
+    color: #3D3D3D;
+    width: 50%;
+    float: right;
+    height: 400px;
+    padding-top: 8%;
+    margin-left: 0px;
+}
+
+.right {
+    background-color: #F5F5F5;
+    color: #3D3D3D;
+    width: 50%;
+    float: right;
+    height: 400px;
+    padding-top: 8%;
+    margin-left: 0px;
+}
+
+.right2 {
+    background-color: #D6D6D6;
+    color: #3D3D3D;
+    width: 50%;
+    float: right;
+    height: 400px;
+    padding-top: 8%;
+    margin-left: 0px;
+}
+
+.left2 {
+    background-color: #F5F5F5;
+    width: 50%;
+    float: right;
+    height: 400px;
+    padding-top: 8%;
+    margin-left: 0px;
+    color: #3D3D3D;
+}
+
 .img124 {
     align-content: center;
     width: 120px;
     height: 120px;
-    padding-top: 5%;
+    padding-top: 8%;
     margin-right: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
+
+.stats {
+    padding-top: 0%;   
+}
+
