@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="testDisplay.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">
+                Exercises
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="BicepCurls.html">Bicep Curls</a>
+                <a href="JumpingJacks.html">Jumping jacks</a>
+                <a href="ToeTouch.html">Toe Touches</a>
+            </div>
+        </div>
+        <a href="Stats.html">Stats</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+
+
+    <h1>Online Personal Trainer</h1>
+    <h2>Exercise 1.0: Bicep Curls</h2>
+    <h3>Example video here</h3>
+    <video controls>
+        <source src="BicepCurl.mp4" type="video/mp4">
+    </video>
+    <h3> Video displaying the user here</h3>
+    <h2>Detection using OpenCV and MoveNet</h2>
+    <img id="bg" src="{{ url_for('video_feed') }}">
+
+</body>
+</html>
