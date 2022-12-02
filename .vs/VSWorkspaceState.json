@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Project",
+    "\\Project\\CV_WebApp_Implementation",
+    "\\Project\\CV_WebApp_Implementation\\templates"
   ],
-  "SelectedNode": "\\C:\\Users\\nadia\\Source\\Repos\\Group31-FA22",
+  "SelectedNode": "\\Project\\CV_WebApp_Implementation\\testDisplay.html",
   "PreviewInSolutionExplorer": false
 }
