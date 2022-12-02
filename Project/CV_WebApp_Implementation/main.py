@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('testDisplay.html')
 
 def gen(camera):
     while camera.video.isOpened():
