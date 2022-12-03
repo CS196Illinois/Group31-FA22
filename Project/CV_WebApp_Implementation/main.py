@@ -1,4 +1,5 @@
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, jsonify
+import camera as camInstance
 from camera import VideoCamera
 
 app = Flask(__name__)
@@ -9,7 +10,12 @@ def index():
 
 @app.route('/bicep_curls')
 def bicep_curls():
-    return render_template('BicepCurls.html')
+    bicepCurlCount = getCountVal()
+    return render_template('BicepCurls.html', curlCount = bicepCurlCount)
+
+def getCountVal():
+    return camInstance.getCount()
+                
 
 @app.route('/jumping_jacks')
 def jumping_jacks():
@@ -22,7 +28,7 @@ def toe_touch():
 @app.route('/stats')
 def stats():
     return render_template('Stats.html')
-
+    
 def gen(camera):
     while camera.video.isOpened():
         frame = camera.get_frame()

@@ -56,7 +56,7 @@
         <video controls>
             <source src="{{url_for('static', filename='BicepCurl.mp4')}}" type="video/mp4">
         </video>
-        <h3> Count = </h3><p>count</p>
+        <h3> Count = </h3><strong>{{curlCount}}</strong>
         <h3> Video displaying the user here</h3>
         <h2>Detection using OpenCV and MoveNet</h2>
         <img id="bg" src="{{ url_for('video_feed') }}">

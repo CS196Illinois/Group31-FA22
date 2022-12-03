@@ -95,7 +95,6 @@ class VideoCamera(object):
     
     def __del__(self):
         self.video.release()
-
     
     def get_frame(self):
         ret, frame = self.video.read()
