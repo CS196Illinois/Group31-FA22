@@ -5,11 +5,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index(VideoCamera):
-    return render_template('testDisplay.html', count= VideoCamera.getCount())
+    return render_template('testDisplay.html')
 
 @app.route('/bicep_curls')
 def bicep_curls():
-    return render_template('BicepCurls.html')
+    return render_template('BicepCurls.html', count=VideoCamera.getCount())
 
 @app.route('/jumping_jacks')
 def jumping_jacks():
