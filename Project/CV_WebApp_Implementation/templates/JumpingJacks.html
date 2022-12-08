@@ -4,25 +4,25 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
     <meta charset="utf-8" />
     <title></title>
 </head>
-<body>
+<body class="mybody">
     <div class="topnav">
-        <a class="active" href="testDisplay.html">Home</a>
+        <a class="active" href="{{url_for('index')}}">Home</a>
         <div class="dropdown">
             <button class="dropbtn" onclick="myFunction()">
                 Exercises
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" id="myDropdown">
-                <a href="{{ url_for('bicep_curls') }}">Bicep Curls</a>
-                <a href="JumpingJacks.html">Jumping jacks</a>
-                <a href="ToeTouch.html">Toe Touches</a>
+                <a href="{{url_for('bicep_curls')}}">Bicep Curls</a>
+                <a href="{{url_for('jumping_jacks')}}">Jumping jacks</a>
+                <a href="{{url_for('toe_touch')}}">Toe Touches</a>
             </div>
         </div>
-        <a href="Stats.html">Stats</a>
+        <a href="{{url_for('stats')}}">Stats</a>
         <div class="search-container">
             <form action="/action_page.php">
                 <input type="text" placeholder="Search.." name="search">
@@ -54,9 +54,8 @@
     </div>
         <div class="myDiv">
             <h2>Exercise 2.0: Jumping Jacks</h2>
-            <h3>Example video here</h3>
             <video controls>
-                <source src="Jumping Jacks.mp4" type="video/mp4">
+                <source src="{{url_for('static', filename='JumpingJacks.mp4')}}" type="video/mp4">
             </video>
             <h3> Video displaying the user here</h3>
             <h2>Detection using OpenCV and MoveNet</h2>

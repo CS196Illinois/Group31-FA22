@@ -3,9 +3,7 @@
 }
 
 
-{
-    box-sizing: border-box;
-}
+
 
 body {
     margin: 0;
@@ -136,14 +134,14 @@ h1, h2, h3 {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 0.5%;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
     font-style: normal;
     font-variant: normal;
     font-weight: 600;
-    line-height: 26.4px;
 }
 
 h1 {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     padding-left: 15%;
     font-size: 60px;
     padding-top: 10%;
@@ -181,3 +179,127 @@ video {
     padding-bottom: 6%;
     background-image: linear-gradient(#25326A, #11152D);
 }
+
+.mybody {
+    background-image: linear-gradient(#25326A, #11152D);
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.homeHeading {
+    font-size: 100px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 3%;
+    padding-top: 1%;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 30px;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20%;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 600;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button1 {
+    border-radius: 30px;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+.left {
+    background-color: #D6D6D6;
+    color: #3D3D3D;
+    width: 50%;
+    float: right;
+    height: 400px;
+    padding-top: 8%;
+    margin-left: 0px;
+}
+
+.right {
+    background-color: #F5F5F5;
+    color: #3D3D3D;
+    width: 50%;
+    float: right;
+    height: 400px;
+    padding-top: 8%;
+    margin-left: 0px;
+}
+
+.right2 {
+    background-color: #D6D6D6;
+    color: #3D3D3D;
+    width: 50%;
+    float: right;
+    height: 400px;
+    padding-top: 8%;
+    margin-left: 0px;
+}
+
+.left2 {
+    background-color: #F5F5F5;
+    width: 50%;
+    float: right;
+    height: 400px;
+    padding-top: 8%;
+    margin-left: 0px;
+    color: #3D3D3D;
+}
+
+.img124 {
+    align-content: center;
+    width: 120px;
+    height: 120px;
+    padding-top: 8%;
+    margin-right: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.stats {
+    padding-top: 0%;   
+}
+

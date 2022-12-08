@@ -1,27 +1,26 @@
 ﻿<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <meta charset="utf-8" />
     <title></title>
 </head>
-<body>
-
-    <!-- <div class="topnav">
-        <a class="active" href="testDisplay.html">Home</a>
+<body class="mybody">
+    <div class="topnav">
+        <a class="active" href="{{url_for('index')}}">Home</a>
         <div class="dropdown">
             <button class="dropbtn" onclick="myFunction()">
                 Exercises
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" id="myDropdown">
-                <a href="{{ url_for('bicep_curls') }}">Bicep Curls</a>
-                <a href="JumpingJacks.html">Jumping jacks</a>
-                <a href="#">Toe Touches</a>
+                <a href="{{url_for('bicep_curls')}}">Bicep Curls</a>
+                <a href="{{url_for('jumping_jacks')}}">Jumping jacks</a>
+                <a href="{{url_for('toe_touch')}}">Toe Touches</a>
             </div>
         </div>
-        <a href="Stats.html">Stats</a>
+        <a href="{{url_for('stats')}}">Stats</a>
         <div class="search-container">
             <form action="/action_page.php">
                 <input type="text" placeholder="Search.." name="search">
@@ -79,11 +78,13 @@
         }
     </script>
 
+    <img src="{{url_for('static', filename='logoCS124Honors.jpg') }}" alt="124 honors logo" class="img124">
 
-    <h1>Online Personal Trainer</h1>
-    <h2>Lets Get Started</h2>
-    <h2>How to navigate the page information with pictues on what each button does</h2>
-    <img src="Images/ScreenshotWebsite1.jpg" alt="Click on Exercises image">
+    <h1 class="homeHeading">Online Personal Trainer</h1>
+
+    <form action="{{url_for('bicep_curls')}}" method="get">
+        <button class="button button1"><span>Let's Get Started</span></button>
+    </form>
 
 </body>
 </html>
