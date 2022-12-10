@@ -2,6 +2,7 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
     <meta charset="utf-8" />
     <title></title>
@@ -56,7 +57,25 @@
         <video controls>
             <source src="{{url_for('static', filename='BicepCurl.mp4')}}" type="video/mp4">
         </video>
-        <h3> Count = </h3><p>{{curlCount}}</p>
+        <script>
+            $(function(){
+                window.setInterval(function(){
+                    loadNewCount()
+                }, 250)
+            
+            function loadNewCount(){
+                $.ajax({
+                    url:"/update_count",
+                    type: "POST",
+                    dataType: "json",
+                    success: function(data) {
+                        $(countVal).replaceWith(data)
+                    }
+                });
+            }
+            });
+        </script>
+        <h3> Count = </h3><p id="countVal">{{curlCount}}</p>
         <h3> Video displaying the user here</h3>
         <h2>Detection using OpenCV and MoveNet</h2>
         <img id="bg" src="{{ url_for('video_feed') }}">

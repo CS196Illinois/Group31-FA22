@@ -8,13 +8,23 @@ app = Flask(__name__)
 def index():
     return render_template('testDisplay.html')
 
-@app.route('/bicep_curls')
-def bicep_curls():
-    bicepCurlCount = getCountVal()
-    return render_template('BicepCurls.html', curlCount = bicepCurlCount)
 
 def getCountVal():
     return camInstance.getCount()
+
+bicepCurlCount = getCountVal()
+
+@app.route('/bicep_curls')
+def bicep_curls():
+    return render_template('BicepCurls.html', curlCount = bicepCurlCount)
+
+
+
+@app.route("/update_count", methods=['POST'])
+def update_count():
+    bicepCurlCount = getCountVal()
+    return jsonify('', render_template('getCountModel.html', curlCount = bicepCurlCount))
+
                 
 
 @app.route('/jumping_jacks')
