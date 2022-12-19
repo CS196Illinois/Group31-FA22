@@ -1,5 +1,3 @@
-#Used this tutorial for inspiration: https://www.youtube.com/watch?v=-4v4A550K3w&ab_channel=MisbahMohammed 
-
 import cv2
 import tensorflow as tf
 from matplotlib import pyplot as plt
